@@ -43,10 +43,5 @@ def show_post(season, episode):
     return render_template('episode.html', **context)
 
 
-def nav_buttons(season, episode):
-
-   
-
-
 if __name__ == '__main__':
     app.run()
