@@ -33,7 +33,6 @@ def show_post(season, episode):
     context = {
         'season': season,
         'episode': episode,
-        'nav': nav_buttons(season, episode),
         'content': []
     }
 

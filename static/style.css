@@ -11,3 +11,40 @@ header img {
     height: 3rem;
     vertical-align: sub;
 }
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+.nav {
+    max-width: 600px;
+    height: 3rem;
+}
+
+.nav-left {
+    display: inline;
+}
+
+.nav-right {
+    float: right;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content p {
+    display: inline-block;
+}
+
+.choose-season {
+    list-style: none;
+}
+
+.choose-season a {
+    font-size: xx-large;
+}
+
+.credit {
+    margin-top: 3rem;
+}
