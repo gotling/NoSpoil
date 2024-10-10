@@ -39,6 +39,8 @@ header h1 {
 
 .choose-season {
     list-style: none;
+    padding-left: 0.5rem;
+    margin-top: 2rem;
 }
 
 .choose-season a {
@@ -47,4 +49,8 @@ header h1 {
 
 .credit {
     margin-top: 3rem;
+}
+
+.credit a {
+    text-decoration: underline;
 }

@@ -1,9 +1,11 @@
 <div class="nav">
-{% if episode > 1 %}
 <div class="nav-left">
+{% if episode > 1 %}
 <a href="/{{season}}/{{episode-1}}">◀ Previous</a>
-</div>
+{% else %}
+<a href="/">◀ Home</a>
 {% endif %}
+</div>
 <div class="nav-right">
 &nbsp;<a href="/{{season}}/{{episode+1}}">Next ▶</a>
 </div>
