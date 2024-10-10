@@ -9,10 +9,6 @@ app = Flask(__name__)
 
 main = 'https://www.realitytvrevisited.com/2016/02/hells-kitchen-contestants.html'
 
-#year = 2016
-#month = 11
-#base_url = f'https://www.realitytvrevisited.com/{year}/{month}/hells-kitchen-season-{{}}-contestants.html'
-
 season_urls = []
 
 session = requests_cache.CachedSession('hell')
@@ -45,7 +41,6 @@ def get_season_numbers():
 
 
 def get_soup(season):
-    #url = base_url.format(season)
     url = get_season_url(season)
     page = session.get(url)
     print("Cache", page.from_cache, "Expired", page.is_expired)
@@ -66,6 +61,7 @@ def show_post(season, episode):
     context = {
         'season': season,
         'episode': episode,
+        'season_url': get_season_url(season),
         'content': []
     }
 
@@ -73,6 +69,22 @@ def show_post(season, episode):
         context['content'].append(str(person.parent))
 
     return render_template('episode.html', **context)
+
+
+@app.route('/final/<int:season>')
+def show_final(season):
+    soup = get_soup(season)
+    winner = soup.find(string=re.compile("season {} winner".format(season)))
+    runner_up = soup.find(string=re.compile("runner up".format(season)))
+
+    context = {
+        'season': season,
+        'season_url': get_season_url(season),
+        'winner': str(winner.parent),
+        'runner_up': str(runner_up.parent)
+    }
+
+    return render_template('final.html', **context)
 
 
 get_season_urls()

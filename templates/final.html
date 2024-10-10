@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Season {{ season }} final{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+    <h2>Season {{ season }} final</h2>
+    <div class="content">
+        <h3>Runner up</h3>
+        {{ runner_up|safe }}
+        
+        <h3>Winner</h3>
+        {{ winner|safe }}
+    </div>
+
+    <h3>Full post</h3>
+    <a href="{{ season_url|safe }}">Reality Tv Revisited</a>
+{% endblock %}
