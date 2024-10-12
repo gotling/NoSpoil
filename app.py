@@ -16,7 +16,6 @@ session = requests_cache.CachedSession('hell')
 
 def get_season_urls():
     page = session.get(main)
-    print("Cache", page.from_cache, "Expired", page.is_expired)
     soup = BeautifulSoup(page.content, 'html.parser')
     
     for link in soup.find_all('a'):
@@ -43,7 +42,6 @@ def get_season_numbers():
 def get_soup(season):
     url = get_season_url(season)
     page = session.get(url)
-    print("Cache", page.from_cache, "Expired", page.is_expired)
     return BeautifulSoup(page.content, 'html.parser')
 
 
