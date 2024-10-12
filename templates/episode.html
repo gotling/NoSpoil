@@ -20,6 +20,10 @@
         {% endfor %}
     </div>
 
-    <h3 class="credit">Full post</h3>
-    <a href="{{ season_url|safe }}">Reality Tv Revisited</a>
+    <h3 class="credit">Read more</h3>
+    <ul>
+        {% for contestant in contestants %}
+        <li><a href="https://hellskitchen.fandom.com/wiki/{{ contestant }}">{{ contestant }} (Hell's Kitchen Wiki)</a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}

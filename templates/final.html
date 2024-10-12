@@ -13,6 +13,12 @@
         {{ winner|safe }}
     </div>
 
-    <h3>Full post</h3>
-    <a href="{{ season_url|safe }}">Reality Tv Revisited</a>
+    <h3>Read more</h3>
+    <ul>
+        {% for contestant in contestants %}
+        <li><a href="https://hellskitchen.fandom.com/wiki/{{ contestant.replace(' ', '_') }}">{{ contestant }} (Hell's Kitchen Wiki)</a></li>
+        {% endfor %}
+        <li><a href="{{ season_url|safe }}">Season {{ season }} (Reality Tv Revisited)</a></li>
+    </ul>
+    
 {% endblock %}

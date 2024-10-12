@@ -60,11 +60,14 @@ def show_post(season, episode):
         'season': season,
         'episode': episode,
         'season_url': get_season_url(season),
-        'content': []
+        'content': [],
+        'contestants': []
     }
 
     for person in result:
         context['content'].append(str(person.parent))
+        context['contestants'].append(str(person.parent.find('b').text))
+
 
     return render_template('episode.html', **context)
 
@@ -79,7 +82,8 @@ def show_final(season):
         'season': season,
         'season_url': get_season_url(season),
         'winner': str(winner.parent),
-        'runner_up': str(runner_up.parent)
+        'runner_up': str(runner_up.parent),
+        'contestants': [str(winner.parent.find('b').text), str(runner_up.parent.find('b').text)]
     }
 
     return render_template('final.html', **context)
