@@ -4,7 +4,8 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-    <h2>Season {{ season }} final</h2>
+    {% include 'nav-season.html' %}
+    <h2>Final</h2>
     <div class="content">
         <h3>Runner up</h3>
         {{ runner_up|safe }}

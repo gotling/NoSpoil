@@ -16,6 +16,10 @@ header h1 {
     font-size: 1.6rem;
 }
 
+main h2 {
+    margin-top: 0;
+}
+
 .nav {
     max-width: 600px;
     height: 3rem;
@@ -48,6 +52,11 @@ header h1 {
     margin-top: 2rem;
 }
 
+.choose-season a:visited {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
 .choose-season a {
     font-size: xx-large;
 }
@@ -63,4 +72,17 @@ header h1 {
 .final-link {
     display: inline-block;
     font-size: x-large;
+}
+
+/* container */
+.three-columns-grid {
+    max-width: 600px;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* columns */
+.three-columns-grid > * {
+    /* padding:1rem; */
 }

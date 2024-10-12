@@ -1,12 +1,15 @@
-<div class="nav">
-<div class="nav-left">
-{% if episode > 1 %}
-<a href="/{{season}}/{{episode-1}}">◀ Previous</a>
-{% else %}
-<a href="/">◀ Home</a>
-{% endif %}
-</div>
-<div class="nav-right">
-&nbsp;<a href="/{{season}}/{{episode+1}}">Next ▶</a>
-</div>
+<div class="three-columns-grid">
+    <div>
+        {% if episode > 1 %}
+        <a href="/{{ season }}/{{ episode - 1 }}">◀ Episode {{ episode - 1 }}</a>
+        {% else %}
+        <a href="/">◀ Home</a>
+        {% endif %}
+    </div>
+    <div>
+        <h2>Episode {{ episode }}</h2>
+    </div>
+    <div>
+        <a href="/{{ season }}/{{ episode + 1 }}">Episode {{ episode + 1 }} ▶</a>
+    </div>
 </div>

@@ -1,0 +1,15 @@
+<div class="three-columns-grid">
+    <div>
+        {% if season > 1 %}
+        <a href="/{{season - 1}}/1">◀ Season {{ season - 1 }}</a>
+        {% else %}
+        <a href="/">◀ Home</a>
+        {% endif %}
+    </div>
+    <div>
+        <h2>Season {{ season }}</h2>
+    </div>
+    <div>
+        <a href="/{{season + 1}}/1">Season {{ season + 1 }} ▶</a>
+    </div>
+</div>

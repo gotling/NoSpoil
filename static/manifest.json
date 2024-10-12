@@ -1,0 +1,18 @@
+{
+  "short_name": "No Spoilers",
+  "name": "No Spoilers - Hell's Kitchen",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "id": "nospoiler",
+  "start_url": "/?source=pwa",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff",
+  "description": "Show info about contestants without spoiling furture watching."
+}

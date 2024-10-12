@@ -4,7 +4,7 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-    <h2>Eliminated season {{ season }} episode {{ episode }}</h2>
+    {% include 'nav-season.html' %}
     {% include 'nav.html' %}
     <div class="content">
         {% for person in content %}
