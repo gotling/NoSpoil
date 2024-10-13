@@ -33,6 +33,10 @@ main h2 {
     margin-top: 0;
 }
 
+.nav.margin-top {
+    margin-top: 0.5rem;
+}
+
 .nav {
     max-width: 600px;
     height: 3rem;
@@ -41,6 +45,14 @@ main h2 {
 
 .nav h2 {
     margin: 0 1rem;
+}
+
+.nav a {
+    color: rgb(88 88 88);
+}
+
+.arrow {
+    font-size: x-small;
 }
 
 .nav-center {

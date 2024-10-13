@@ -1,13 +1,13 @@
-<div class="three-columns-grid nav">
+<div class="three-columns-grid nav margin-top">
     <div>
         {% if season > 1 %}
-        <a href="/{{season - 1}}/1">◀ Season {{ season - 1 }}</a>
+        <a href="/{{season - 1}}/1"><span class="arrow">◀</span> Season {{ season - 1 }}</a>
         {% endif %}
     </div>
     <div class="nav-center">
         <h2>Season {{ season }}</h2>
     </div>
     <div class="nav-right">
-        <a href="/{{season + 1}}/1">Season {{ season + 1 }} ▶</a>
+        <a href="/{{season + 1}}/1">Season {{ season + 1 }} <span class="arrow">▶</span></a>
     </div>
 </div>
