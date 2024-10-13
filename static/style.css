@@ -96,6 +96,11 @@ main h2 {
     font-size: x-large;
 }
 
+.history {
+    margin-top: 1rem;
+    font-size: large;
+}
+
 .credit {
     margin-top: 3rem;
 }

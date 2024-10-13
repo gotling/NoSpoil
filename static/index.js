@@ -1,12 +1,18 @@
 const lastUrlKey = "lastUrl";
+const lastNameKey = "lastName";
 
-if (document.location.pathname == '/' && !document.referrer) {
+if (document.location.pathname == '/') {
     if (lastUrlKey in localStorage) {
-        let url = localStorage.getItem(lastUrlKey)
+        let url = localStorage.getItem(lastUrlKey);
+        let name = localStorage.getItem(lastNameKey);
+
         if (url !== document.location.pathname) {
-            location.href = url;
+            var a = document.getElementById('history-link');
+            a.href = url;
+            a.innerText = name;
         }
     }
+} else {
+    localStorage.setItem(lastUrlKey, location.href);
+    localStorage.setItem(lastNameKey, LAST_NAME);
 }
-
-localStorage.setItem(lastUrlKey, location.href);

@@ -25,5 +25,11 @@
         {% for contestant in contestants %}
         <li><a href="https://hellskitchen.fandom.com/wiki/{{ contestant }}">{{ contestant }} (Hell's Kitchen Wiki)</a></li>
         {% endfor %}
+        <li><a href="https://www.youtube.com/results?search_query=%40hellskitchen+season+{{season}}+episode+{{episode}}">YouTube Season {{season}} Episode {{episode}}</a></li>
+        <li><a href="https://www.youtube.com/results?search_query=%40hellskitchen+season+{{season}}+episode+{{episode+1}}">YouTube Season {{season}} Episode {{episode+1}}</a></li>
     </ul>
+
+    <script>
+        const LAST_NAME = "Season {{ season }} episode {{ episode }}";
+    </script>
 {% endblock %}
