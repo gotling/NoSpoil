@@ -9,11 +9,24 @@ a, a:active, a:visited {
 
 header img {
     height: 3rem;
-    vertical-align: sub;
+    margin-right: 1rem;
+    margin-top: -8px;
 }
 
 header h1 {
     font-size: 1.6rem;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgb(211,211,211);
+    background: linear-gradient(0deg, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%);
+    margin: -8px -8px 0;
+    padding: 0.5rem;
 }
 
 main h2 {
