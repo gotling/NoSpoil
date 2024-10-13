@@ -23,14 +23,19 @@ main h2 {
 .nav {
     max-width: 600px;
     height: 3rem;
+    align-items: center;
 }
 
-.nav-left {
-    display: inline;
+.nav h2 {
+    margin: 0 1rem;
+}
+
+.nav-center {
+    text-align: center;
 }
 
 .nav-right {
-    float: right;
+    text-align: right;
 }
 
 .content {
@@ -84,7 +89,7 @@ main h2 {
     max-width: 600px;
     display: grid;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 /* columns */
