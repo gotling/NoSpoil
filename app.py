@@ -1,5 +1,6 @@
 import requests_cache
 
+import math
 import re
 from bs4 import BeautifulSoup
 
@@ -21,7 +22,7 @@ def get_season_urls():
     for link in soup.find_all('a'):
         if link.has_attr('href'):
             href = link['href']
-            if href and not href.startswith('#') and 'hells-kitchen-season-' in href:
+            if href and not href.startswith('#') and 'hells-kitchen-' in href and '-season' in href:
                 season_urls.append(href)
 
 
@@ -48,7 +49,7 @@ def get_soup(season):
 @app.route("/")
 def index():
     numbers = get_season_numbers()
-    return render_template('index.html', seasons=numbers)
+    return render_template('index.html', seasons=numbers, column_count=math.ceil(len(numbers)/2))
 
 
 @app.route('/<int:season>/<int:episode>')

@@ -48,17 +48,22 @@ main h2 {
 
 .choose-season {
     list-style: none;
-    padding-left: 0.5rem;
+    padding-left: 0rem;
     margin-top: 2rem;
-}
-
-.choose-season a:visited {
-    color: #7c7c7c;
-    text-decoration: none;
+    text-align: center;
 }
 
 .choose-season a {
-    font-size: xx-large;
+    color: #999999;
+}
+
+.choose-season a:visited {
+    color: #000000;
+    font-weight: bold;
+}
+
+.choose-season a {
+    font-size: x-large;
 }
 
 .credit {
@@ -84,5 +89,16 @@ main h2 {
 
 /* columns */
 .three-columns-grid > * {
+    /* padding:1rem; */
+}
+
+/* container */
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* columns */
+.two-columns-grid > * {
     /* padding:1rem; */
 }

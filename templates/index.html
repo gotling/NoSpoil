@@ -7,11 +7,24 @@
 {% block content %}
     <p>This site was made to be able to find out what happened to an eliminated contestant, without getting spoilers on when other people got eliminated.</p>
     
-    <ul class="choose-season">
-    {% for season in seasons %}
-        <li><a href="/{{ season }}/1">Season {{ season }}</a></li>
-    {% endfor %}
-    </ul>
+    <div class="two-columns-grid">
+        <div>
+            <ul class="choose-season">
+            {% for season in seasons[:column_count] %}
+            <li><a href="/{{ season }}/1">Season {{ season }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <ul class="choose-season">
+            {% for season in seasons[-column_count:] %}
+            <li><a href="/{{ season }}/1">Season {{ season }}</a></li>
+            {% endfor %}
+        </ul>
+        </div>
+    </div>
+    
+
 
     <p class="credit">
         Data fetched from <a href="https://www.realitytvrevisited.com/">Reality Tv Revisited</a>. Visit for much more information.
