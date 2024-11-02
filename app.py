@@ -76,7 +76,7 @@ def show_post(season, episode):
 @app.route('/final/<int:season>')
 def show_final(season):
     soup = get_soup(season)
-    winner = soup.find(string=re.compile("season {} winner".format(season)))
+    winner = soup.find(string=re.compile("[Ss]eason {} winner".format(season)))
     runner_up = soup.find(string=re.compile("runner up".format(season)))
 
     context = {
