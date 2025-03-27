@@ -12,7 +12,7 @@ main = 'https://www.realitytvrevisited.com/2016/02/hells-kitchen-contestants.htm
 
 season_urls = []
 
-session = requests_cache.CachedSession('hell')
+session = requests_cache.CachedSession('data/hell')
 
 
 def get_season_urls():

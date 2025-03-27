@@ -1,0 +1,10 @@
+version: "2"
+volumes:
+    data:
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - 'data:/app/data'
